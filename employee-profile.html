@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile | EIMS</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE PORTAL</small></p>
+            <p class="nav-label">Workspace</p>
+            <nav class="nav-links" aria-label="Employee navigation">
+                <a href="employee-home.html">Home</a>
+                <a class="active" href="employee-profile.html">View Profile</a>
+                <a href="employee-updates.html">Tasks &amp; Announcements</a>
+                <a href="employee-information.html">Update Information</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+        <main class="workspace">
+            <header class="topbar">
+                <strong>View Profile</strong>
+                <span class="user-chip">Welcome, EMP001</span>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>Personal Information</h1>
+                        <p>Impormasyon ng iyong employee profile.</p>
+                    </div>
+                </div>
+                <section class="card" aria-label="Employee profile details">
+                    <div class="form-grid">
+                        <div class="field"><label>Employee ID</label><p>EMP001</p></div>
+                        <div class="field"><label>Full Name</label><p>Jennah C. Soriano</p></div>
+                        <div class="field"><label>Position</label><p>System Administrator</p></div>
+                        <div class="field"><label>Department</label><p>Information Technology (IT)</p></div>
+                        <div class="field"><label>Email</label><p>jennah.soriano@gamil.com</p></div>
+                        <div class="field"><label>Contact Number</label><p>Contact HR to update</p></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

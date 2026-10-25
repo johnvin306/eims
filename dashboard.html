@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Employee Information Management System</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="admin-dashboard">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE MANAGEMENT</small></p>
+            <p class="nav-label">Main menu</p>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a class="active" href="dashboard.html">Dashboard</a>
+                <a href="employee-records.html">View Employee</a>
+                <a href="user-management.html">User Management</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="topbar">
+                <strong>Admin Dashboard</strong>
+                <span class="user-chip">Welcome, ADMIN</span>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>Workforce overview</h1>
+                    </div>
+                    <span class="dashboard-date">As of <time id="dashboard-date"></time></span>
+                </div>
+
+                <section class="stat-grid" aria-label="Summary statistics">
+                    <article class="stat-card dashboard-stat">
+                        <span class="stat-label">Total employees</span>
+                        <strong class="stat-value">128</strong>
+                        <span class="dashboard-stat-note">Across 13 departments</span>
+                    </article>
+                    <article class="stat-card dashboard-stat active-stat">
+                        <span class="stat-label">Active</span>
+                        <strong class="stat-value">116</strong>
+                        <span class="dashboard-stat-note">90.6% of workforce</span>
+                    </article>
+                    <article class="stat-card dashboard-stat leave-stat">
+                        <span class="stat-label">On leave</span>
+                        <strong class="stat-value">8</strong>
+                        <span class="dashboard-stat-note">6.3% of workforce</span>
+                    </article>
+                    <article class="stat-card dashboard-stat inactive-stat">
+                        <span class="stat-label">Inactive</span>
+                        <strong class="stat-value">4</strong>
+                        <span class="dashboard-stat-note">3.1% of workforce</span>
+                    </article>
+                </section>
+
+                <div class="panel-grid">
+                    <div class="dashboard-side-stack">
+                        <section class="card dashboard-panel" aria-labelledby="workforce-status-heading">
+                            <div class="dashboard-panel-heading">
+                                <div>
+                                    <h2 id="workforce-status-heading">Workforce status</h2>
+                                    <p>Employee distribution by current status</p>
+                                </div>
+                                <a href="reports.html">View report</a>
+                            </div>
+                            <div class="dashboard-status-bar" role="img" aria-label="116 active employees, 8 on leave, and 4 inactive employees, out of 128 total">
+                                <span class="status-segment active-segment" style="width: 90.625%"></span>
+                                <span class="status-segment leave-segment" style="width: 6.25%"></span>
+                                <span class="status-segment inactive-segment" style="width: 3.125%"></span>
+                            </div>
+                            <ul class="dashboard-status-list">
+                                <li><span class="status-key active-key">Active</span><strong>116</strong><span>90.6%</span></li>
+                                <li><span class="status-key leave-key">On leave</span><strong>8</strong><span>6.3%</span></li>
+                                <li><span class="status-key inactive-key">Inactive</span><strong>4</strong><span>3.1%</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="card dashboard-shortcuts" aria-labelledby="admin-shortcuts-heading">
+                            <div class="dashboard-panel-heading">
+                                <div>
+                                    <h2 id="admin-shortcuts-heading">Administrator Quick Links</h2>
+                                </div>
+                            </div>
+                            <nav class="quick-links" aria-label="Administrator shortcuts">
+                                <a href="employee-records.html">View employee records</a>
+                                <a href="user-management.html">Manage user access</a>
+                                <a href="reports.html">Open employee reports</a>
+                            </nav>
+                        </section>
+                    </div>
+
+                    <section class="card dashboard-panel" aria-labelledby="department-headcount-heading">
+                        <div class="dashboard-panel-heading">
+                            <div>
+                                <h2 id="department-headcount-heading">Employees by department</h2>
+                                <p>Headcount distribution · 128 total</p>
+                            </div>
+                            <a href="employee-records.html">View records</a>
+                        </div>
+                        <ul class="department-bars">
+                            <li><span>Sales</span><span class="department-track"><span style="width: 100%"></span></span><strong>15</strong></li>
+                            <li><span>Operations</span><span class="department-track"><span style="width: 100%"></span></span><strong>15</strong></li>
+                            <li><span>Human Resources</span><span class="department-track"><span style="width: 80%"></span></span><strong>12</strong></li>
+                            <li><span>Accounting &amp; Finance</span><span class="department-track"><span style="width: 80%"></span></span><strong>12</strong></li>
+                            <li><span>Customer Service</span><span class="department-track"><span style="width: 80%"></span></span><strong>12</strong></li>
+                            <li><span>Production</span><span class="department-track"><span style="width: 80%"></span></span><strong>12</strong></li>
+                            <li><span>Information Technology</span><span class="department-track"><span style="width: 73.33%"></span></span><strong>11</strong></li>
+                            <li><span>Marketing</span><span class="department-track"><span style="width: 66.67%"></span></span><strong>10</strong></li>
+                            <li><span>Administration</span><span class="department-track"><span style="width: 66.67%"></span></span><strong>10</strong></li>
+                            <li><span>Logistics</span><span class="department-track"><span style="width: 53.33%"></span></span><strong>8</strong></li>
+                            <li><span>Purchasing &amp; Procurement</span><span class="department-track"><span style="width: 33.33%"></span></span><strong>5</strong></li>
+                            <li><span>Research &amp; Development</span><span class="department-track"><span style="width: 20%"></span></span><strong>3</strong></li>
+                            <li><span>Quality Assurance</span><span class="department-track"><span style="width: 20%"></span></span><strong>3</strong></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.getElementById("dashboard-date").textContent = new Intl.DateTimeFormat("en", {
+            dateStyle: "long"
+        }).format(new Date());
+    </script>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

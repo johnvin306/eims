@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Records | Employee Information Management System</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="employee-records-page">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE MANAGEMENT</small></p>
+            <p class="nav-label">Main menu</p>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a class="active" href="employee-records.html">View Employee</a>
+                <a href="user-management.html">User Management</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="topbar">
+                <strong>View Employee</strong>
+                <span class="user-chip">Welcome, ADMIN</span>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>ViewEmployee</h1>
+                        <p>Browse employee information.</p>
+                    </div>
+                </div>
+
+                <section class="card" aria-labelledby="employee-table-heading">
+                    <h2 id="employee-table-heading">Employee List</h2>
+                    <div class="employee-list-filters">
+                        <div class="field">
+                            <label for="employee-search">Search Employee</label>
+                            <input id="employee-search" type="search" placeholder="Search by ID, name, or email">
+                        </div>
+                        <div class="field">
+                            <label for="employee-department-filter">Filter:</label>
+                            <select id="employee-department-filter">
+                                <option value="">All</option>
+                                <option>Information Technology (IT)</option>
+                                <option>Human Resources (HR)</option>
+                                <option>Finance</option>
+                                <option>Operations</option>
+                            </select>
+                        </div>
+                        <button class="button primary" type="button">Search</button>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Employee ID</th><th>Full Name</th><th>Email</th><th>Department</th><th>Position</th><th>Status</th><th>Date Hired</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>EMP001</td><td>Jennah C. Soriano</td><td>jennah.soriano@gamil.com</td><td>Information Technology (IT)</td><td>System Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                <tr><td>EMP002</td><td>Darvin John R. Banan</td><td>darvin.banan@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                <tr><td>EMP003</td><td>James Carl Javier</td><td>james.javier@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                                <tr><td>EMP004</td><td>James Mico Ilano</td><td>james.ilano@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td><span class="badge inactive">Inactive</span></td><td>2019-02-18</td></tr>
+                                <tr><td>EMP005</td><td>Baby Gail P. Villarico</td><td>gail.villarico@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                <tr><td>EMP006</td><td>Jhon Wesley Diaz</td><td>jhon.diaz@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                <tr><td>EMP007</td><td>Rayver Aguilar</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                                <tr><td>EMP008</td><td>Charles Dominic De Leon</td><td>charles.deleon@gamil.com</td><td>Information Technology (IT)</td><td>Web Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                <tr><td>EMP009</td><td>Ashter Jhay Rapanot</td><td>ashter.rapanot@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                <tr><td>EMP010</td><td>Vincent Buenaventura</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

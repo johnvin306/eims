@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks and Announcements | EIMS</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE PORTAL</small></p>
+            <p class="nav-label">Workspace</p>
+            <nav class="nav-links" aria-label="Employee navigation">
+                <a href="employee-home.html">Home</a>
+                <a href="employee-profile.html">View Profile</a>
+                <a class="active" href="employee-updates.html">Tasks &amp; Announcements</a>
+                <a href="employee-information.html">Update Information</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+        <main class="workspace">
+            <header class="topbar">
+                <strong>Tasks &amp; Announcements</strong>
+                <span class="user-chip">Welcome, EMP001</span>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>Tasks and Announcements</h1>
+                        <p>Mga sample na update mula sa admin o HR.</p>
+                    </div>
+                </div>
+                <section class="card" aria-labelledby="announcements-heading">
+                    <h2 id="announcements-heading">Company Announcements</h2>
+                    <p>Wala pang inilalagay na announcement.</p>
+                </section>
+                <section class="card" style="margin-top: 20px" aria-labelledby="tasks-heading">
+                    <h2 id="tasks-heading">Tasks and Schedule</h2>
+                    <p>Wala pang inilalagay na task o schedule.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

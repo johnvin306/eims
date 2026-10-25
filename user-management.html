@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management | Employee Information Management System</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE MANAGEMENT</small></p>
+            <p class="nav-label">Main menu</p>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="employee-records.html">View Employee</a>
+                <a class="active" href="user-management.html">User Management</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="topbar">
+                <strong>User Management</strong>
+                <span class="user-chip">Welcome, ADMIN</span>
+            </header>
+            <div class="content">
+                <div class="page-heading">
+                    <div>
+                        <h1>User Management</h1>
+                        <p>Review user accounts, assign roles, and view sample permissions.</p>
+                    </div>
+                </div>
+
+                <section class="card" aria-labelledby="user-form-heading">
+                    <h2 id="user-form-heading">User Role Form</h2>
+                    <div class="form-grid">
+                        <div class="field"><label for="user-employee-id">Employee ID</label><input id="user-employee-id" placeholder="Enter employee ID"></div>
+                        <div class="field"><label for="user-name">Name</label><input id="user-name" placeholder="Enter user name"></div>
+                        <div class="field"><label for="user-email">Email</label><input id="user-email" type="email" placeholder="name@example.com"></div>
+                        <div class="field"><label for="user-department">Department</label><input id="user-department" type="text" placeholder="Enter Department">
+                        </div>
+
+                        <div class="field">
+                            <label for="user-role">Role</label>
+                            <select id="user-role">
+                                <option>Information Technology (IT)</option>
+                                <option>Human Resources (HR)</option>
+                                <option>Accounting and Finance</option>
+                                <option>Sales</option>
+                                <option>Marketing</option>
+                                <option>Administration</option>
+                                <option>Operations</option>
+                                <option>Customer Service</option>
+                                <option>Production</option>
+                                <option>Logistics</option>
+                                <option>Purchasing and Procurement</option>
+                                <option>Research and Development (R&D)</option>
+                                <option>Quality Assurance (QA)</option>
+                                <option>Legal</option>
+                                <option>Facilities and Maintenance</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="user-status">Permissions</label>
+                            <select id="user-status">
+                                <option>Full Access</option>
+                                <option>Monitor Database</option>
+                                <option>Manage Database</option>
+                                <option>Monitor Network</option>
+                                <option>Manage Network</option>
+                                <option>Monitor Security</option>
+                                <option>Manage Security</option>
+                                <option>Monitor Database</option>
+                                <option>Manage Web</option>
+                                <option>Monitor Staff</option>
+                                <option>Manage Staff</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="button-row">
+                        <button class="button primary" type="button">Add User</button>
+                    </div>
+                </section>
+
+                <section class="card" style="margin-top: 20px" aria-labelledby="users-table-heading">
+                    <h2 id="users-table-heading">System Users</h2>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Employee ID</th><th>Name</th><th>Email</th><th>Department</th><th>Role</th><th>Permissions</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>EMP001</td><td>Jennah C. Soriano</td><td>jennah.soriano@gamil.com</td><td>Information Technology (IT)</td><td>Administrator</td><td>Full Access</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+
+                                <tr><td>EMP002</td><td>Darvin John R. Banan</td><td>darvin.banan@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td>Monitor Database</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+                                <tr><td>EMP003</td><td>James Carl Javier</td><td>james.javier@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td>Manage Database</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+
+                                <tr><td>EMP004</td><td>James Mico Ilano</td><td>james.ilano@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td>Monitor Network</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+                                <tr><td>EMP005</td><td>Baby Gail P. Villarico</td><td>gail.villarico@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td>Manage Network</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+
+                                <tr><td>EMP006</td><td>Jhon Wesley Diaz</td><td>jhon.diaz@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td>Monitor Security</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+                                <tr><td>EMP007</td><td>Rayver Aguilar</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td>Manage Security</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+
+                                <tr><td>EMP008</td><td>Charles Dominic De Leon</td><td>charles.deleon@gamil.com</td><td>Information Technology (IT)</td><td>Web Administrator</td><td>Manage Web</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+
+                                <tr><td>EMP009</td><td>Ashter Jhay Rapanot</td><td>ashter.rapanot@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td>Monitor Staff</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+                                <tr><td>EMP010</td><td>Vincent Buenaventura</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td>Manage Staff</td><td><button class="button" type="button">Edit</button> <button class="button danger delete-user" type="button">Delete</button></td></tr>
+                            </tbody>
+                        </table>
+                        <div class="button-row">
+                            <button class="button" type="button">See More</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.querySelector(".table-wrap tbody").addEventListener("click", (event) => {
+            const deleteButton = event.target.closest(".delete-user");
+            if (!deleteButton) return;
+
+            const row = deleteButton.closest("tr");
+            const employeeId = row.cells[0].textContent.trim();
+            if (window.confirm(`Delete user ${employeeId}?`)) {
+                row.remove();
+            }
+        });
+    </script>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

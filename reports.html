@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Employee Information Management System</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE MANAGEMENT</small></p>
+            <p class="nav-label">Main menu</p>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="employee-records.html">View Employee</a>
+                <a href="user-management.html">User Management</a>
+                <a class="active" href="reports.html">Reports</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <header class="topbar">
+                <strong>Reports</strong>
+                <span class="user-chip">Welcome, ADMIN</span>
+            </header>
+            <div class="content">
+                <div class="page-heading reports-heading">
+                    <div>
+                        <h1>Employee Directory Report</h1>
+                    </div>
+                    <section class="card report-actions" aria-label="Report actions">
+                        <button class="button primary" type="button">Generate Report</button>
+                        <button class="button" type="button">Print</button>
+                        <button class="button" type="button">Export CSV</button>
+                    </section>
+                </div>
+
+                    <section class="card" style="margin-top: 20px" aria-labelledby="department-count-heading">
+                        <h2 id="department-count-heading">Count by Department</h2>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr><th>#</th><th>Department</th><th>Employee Count</th></tr>
+                                </thead>
+                                <tbody id="department-count-list">
+                                    <tr><td>1</td><td>Information Technology (IT)</td><td>11</td></tr>
+                                    <tr><td>2</td><td>Human Resources (HR)</td><td>12</td></tr>
+                                    <tr><td>3</td><td>Accounting and Finance</td><td>12</td></tr>
+                                    <tr><td>4</td><td>Sales</td><td>15</td></tr>
+                                    <tr><td>5</td><td>Marketing</td><td>10</td></tr>
+                                    <tr><td>6</td><td>Administration</td><td>10</td></tr>
+                                    <tr><td>7</td><td>Operations</td><td>15</td></tr>
+                                    <tr><td>8</td><td>Customer Service</td><td>12</td></tr>
+                                    <tr><td>9</td><td>Production</td><td>12</td></tr>
+                                    <tr><td>10</td><td>Logistics</td><td>8</td></tr>
+                                    <tr><td>11</td><td>Purchasing and Procurement</td><td>5</td></tr>
+                                    <tr><td>12</td><td>Research and Development (R&amp;D)</td><td>3</td></tr>
+                                    <tr><td>13</td><td>Quality Assurance (QA)</td><td>3</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="card" style="margin-top: 20px" aria-labelledby="employee-records-heading">
+                        <h2 id="employee-records-heading">Employee Records</h2>
+                        <div class="employee-list-filters">
+                            <div class="field">
+                                <label for="report-search">Search Employee</label>
+                                <input id="report-search" type="search" placeholder="Search by ID, name, or email">
+                            </div>
+                            <div class="field">
+                                <label for="report-department">Filter:</label>
+                                <select id="report-department">
+                                    <option value="">All</option>
+                                    <option>Information Technology (IT)</option>
+                                    <option>Human Resources (HR)</option>
+                                    <option>Accounting and Finance</option>
+                                    <option>Sales</option>
+                                    <option>Marketing</option>
+                                    <option>Administration</option>
+                                    <option>Operations</option>
+                                    <option>Customer Service</option>
+                                    <option>Production</option>
+                                    <option>Logistics</option>
+                                    <option>Purchasing and Procurement</option>
+                                    <option>Research and Development (R&amp;D)</option>
+                                    <option>Quality Assurance (QA)</option>
+                                </select>
+                            </div>
+                            <button class="button primary" id="apply-report-search" type="button">Search</button>
+                        </div>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr><th>Employee ID</th><th>Employee Name</th><th>Email</th><th>Department</th><th>Position</th><th>Status</th><th>Date Hired</th></tr>
+                                </thead>
+                                <tbody id="employee-record-list">
+                                    <tr data-report-row><td>EMP001</td><td>Jennah C. Soriano</td><td>jennah.soriano@gamil.com</td><td>Information Technology (IT)</td><td>System Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                    <tr data-report-row><td>EMP002</td><td>Darvin John R. Banan</td><td>darvin.banan@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                    <tr data-report-row><td>EMP003</td><td>James Carl Javier</td><td>james.javier@gamil.com</td><td>Information Technology (IT)</td><td>Database Administrator</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                                    <tr data-report-row><td>EMP004</td><td>James Mico Ilano</td><td>james.ilano@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td><span class="badge inactive">Inactive</span></td><td>2019-02-18</td></tr>
+                                    <tr data-report-row><td>EMP005</td><td>Baby Gail P. Villarico</td><td>gail.villarico@gamil.com</td><td>Information Technology (IT)</td><td>Network Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                    <tr data-report-row><td>EMP006</td><td>Jhon Wesley Diaz</td><td>jhon.diaz@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                    <tr data-report-row><td>EMP007</td><td>Rayver Aguilar</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Security Administrator</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                                    <tr data-report-row><td>EMP008</td><td>Charles Dominic De Leon</td><td>charles.deleon@gamil.com</td><td>Information Technology (IT)</td><td>Web Administrator</td><td><span class="badge">Active</span></td><td>2021-03-15</td></tr>
+                                    <tr data-report-row><td>EMP009</td><td>Ashter Jhay Rapanot</td><td>ashter.rapanot@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td><span class="badge">Active</span></td><td>2022-07-04</td></tr>
+                                    <tr data-report-row><td>EMP010</td><td>Vincent Buenaventura</td><td>rayver.aguilar@gamil.com</td><td>Information Technology (IT)</td><td>Technical Support Staff</td><td><span class="badge pending">On Leave</span></td><td>2020-11-23</td></tr>
+                                    <tr id="report-no-results" hidden><td colspan="7">No employees match the selected filters.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="report-summary" id="report-summary" aria-live="polite">Report · Showing 10 of 128 available records</p>
+                        <div class="button-row">
+                            <button class="button" type="button">See More</button>
+                        </div>
+                    </section>
+            </div>
+        </main>
+    </div>
+    <script>
+        const reportSearch = document.getElementById("report-search");
+        const reportDepartmentFilter = document.getElementById("report-department");
+        const reportStatusFilter = document.getElementById("report-status");
+        const reportDateFilter = document.getElementById("report-date");
+        const reportRows = Array.from(document.querySelectorAll("[data-report-row]"));
+        const reportSummary = document.getElementById("report-summary");
+        const noReportResults = document.getElementById("report-no-results");
+
+        function filterReportRows() {
+            const searchTerm = reportSearch.value.trim().toLowerCase();
+            const department = reportDepartmentFilter.value;
+            const status = reportStatusFilter.value;
+            const dateHired = reportDateFilter.value;
+            const matchingRows = [];
+            reportRows.forEach((row) => {
+                const cells = row.cells;
+                const matches =
+                    row.textContent.toLowerCase().includes(searchTerm) &&
+                    (!department || cells[3].textContent === department) &&
+                    (!status || cells[5].textContent === status) &&
+                    (!dateHired || cells[6].textContent === dateHired);
+                if (matches) matchingRows.push(row);
+            });
+            matchingRows.forEach((row) => { row.hidden = false; });
+            reportRows.filter((row) => !matchingRows.includes(row)).forEach((row) => { row.hidden = true; });
+            noReportResults.hidden = matchingRows.length > 0;
+            reportSummary.textContent = `Sample report · Showing ${matchingRows.length} of ${reportRows.length} available records`;
+        }
+
+        document.getElementById("apply-report-search").addEventListener("click", filterReportRows);
+        reportSearch.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") filterReportRows();
+        });
+        [reportDepartmentFilter, reportStatusFilter, reportDateFilter]
+            .forEach((filter) => filter.addEventListener("input", filterReportRows));
+        document.getElementById("clear-report-filters").addEventListener("click", () => {
+            reportSearch.value = "";
+            reportDepartmentFilter.value = "";
+            reportStatusFilter.value = "";
+            reportDateFilter.value = "";
+            filterReportRows();
+        });
+        filterReportRows();
+    </script>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>

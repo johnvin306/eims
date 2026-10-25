@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login | SAOC Attendance</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: #16233a;
+            background: #eef3f8;
+            font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        h1,
+        h2 {
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .auth-page {
+            display: grid;
+            min-height: 100vh;
+            place-items: center;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, #d7e9fb 0, transparent 45%),
+                radial-gradient(circle at bottom right, #d3f1ef 0, transparent 40%),
+                #eef3f8;
+        }
+
+        .auth-shell {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1.05fr);
+            width: min(940px, 100%);
+            min-height: 560px;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(30, 69, 111, 0.18);
+        }
+
+        .auth-brand-panel {
+            position: relative;
+            padding: 56px 48px;
+            color: #fff;
+            background: linear-gradient(155deg, #0e3a6e 0%, #0a2c55 55%, #071f3d 100%);
+        }
+
+        .auth-brand-panel::after {
+            position: absolute;
+            right: -70px;
+            bottom: -70px;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: rgba(103, 194, 214, 0.12);
+            content: "";
+        }
+
+        .auth-logo {
+            display: grid;
+            width: 84px;
+            height: 84px;
+            place-items: center;
+            margin-bottom: 42px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .eyebrow {
+            margin: 0;
+            color: #a9d3f7;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .auth-brand-panel h1 {
+            margin: 14px 0 18px;
+            font-size: clamp(2.1rem, 4vw, 3.4rem);
+            line-height: 1.06;
+        }
+
+        .brand-copy {
+            position: relative;
+            z-index: 1;
+            max-width: 310px;
+            margin: 0;
+            color: #d5e7f7;
+            line-height: 1.7;
+        }
+
+        .auth-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 56px 52px;
+        }
+
+        .section-kicker {
+            display: inline-block;
+            color: #5f86ae;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .auth-card-heading h2 {
+            margin: 10px 0 8px;
+            font-size: 2rem;
+        }
+
+        .auth-card-heading p {
+            margin: 0;
+            color: #64748b;
+        }
+
+        .auth-form {
+            display: grid;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .auth-form label {
+            color: #53647b;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .auth-form input {
+            width: 100%;
+            height: 48px;
+            margin-bottom: 12px;
+            padding: 0 14px;
+            border: 1px solid #dfe8f1;
+            border-radius: 10px;
+            background: #f8fbfe;
+            color: #16233a;
+            font: inherit;
+        }
+
+        .auth-form input:focus {
+            border-color: #2478bd;
+            box-shadow: 0 0 0 3px rgba(36, 120, 189, 0.15);
+            outline: none;
+        }
+
+        .primary-button {
+            display: block;
+            width: 100%;
+            margin-top: 6px;
+            padding: 14px 18px;
+            border: 0;
+            border-radius: 9px;
+            background: linear-gradient(135deg, #1567a8, #0e4f86);
+            box-shadow: 0 8px 18px rgba(18, 100, 163, 0.28);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+            transition: background 0.15s ease, transform 0.1s ease;
+        }
+
+        .primary-button:hover {
+            background: linear-gradient(135deg, #0e4f86, #0a3f6b);
+        }
+
+        .primary-button:active {
+            transform: translateY(1px);
+        }
+
+        .static-note {
+            margin: 18px 0 0;
+            color: #64748b;
+            font-size: 0.82rem;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .auth-shell {
+                grid-template-columns: 1fr;
+                min-height: 0;
+            }
+
+            .auth-brand-panel {
+                padding: 34px 30px;
+            }
+
+            .auth-logo {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 22px;
+            }
+
+            .auth-card {
+                padding: 36px 28px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .auth-page {
+                padding: 16px;
+            }
+        }
+
+        .auth-page {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(188, 218, 246, 0.72), transparent 38%),
+                radial-gradient(circle at 90% 85%, rgba(190, 229, 222, 0.56), transparent 36%),
+                #eef3f8;
+        }
+
+        .auth-shell {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 28px 80px rgba(24, 57, 91, 0.2);
+        }
+
+        .auth-brand-panel {
+            background:
+                radial-gradient(circle at 20% 100%, rgba(57, 139, 198, 0.24), transparent 45%),
+                linear-gradient(155deg, #164977 0%, #0b3159 58%, #082544 100%);
+        }
+
+        .auth-logo {
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.14);
+            box-shadow: inset 0 1px rgba(255, 255, 255, 0.22), 0 12px 24px rgba(3, 20, 38, 0.16);
+        }
+
+        .auth-card {
+            padding: 60px 56px;
+        }
+
+        .auth-card-heading h2 {
+            color: #173653;
+            letter-spacing: -0.035em;
+        }
+
+        .auth-form input {
+            border-color: #dbe5ef;
+            background: #f9fbfd;
+            transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+        }
+
+        .auth-form input:hover {
+            border-color: #b7cadc;
+        }
+
+        .auth-form input:focus {
+            border-color: #2478bd;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(36, 120, 189, 0.14);
+        }
+
+        .primary-button {
+            background: linear-gradient(135deg, #217ab5, #14558e);
+            box-shadow: 0 8px 18px rgba(18, 100, 163, 0.22);
+            transition: background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+        }
+
+        .primary-button:hover {
+            background: linear-gradient(135deg, #1769a3, #104575);
+            box-shadow: 0 10px 22px rgba(18, 100, 163, 0.28);
+            transform: translateY(-1px);
+        }
+
+        .static-note a {
+            color: #1769aa;
+            font-weight: 700;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        :focus-visible {
+            outline: 3px solid rgba(41, 132, 194, 0.45);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 800px) {
+            .auth-card {
+                padding: 40px 32px;
+            }
+        }
+    </style>
+</head>
+<body class="auth-page employee-auth-page">
+    <main class="auth-shell">
+        <section class="auth-brand-panel">
+            <div class="auth-logo" aria-label="Employee information management system">EIMS</div>
+            <p class="eyebrow">EIMS • EMPLOYEE INFORMATION MANAGEMENT SYSTEM</p>
+            <h1>Employee<br>Portal</h1>
+            <p class="brand-copy">Sign in with your employee account to login.</p>
+        </section>
+
+        <section class="auth-card">
+            <div class="auth-card-heading">
+                <span class="section-kicker">Employee access</span>
+                <h2>Welcome</h2>
+                <p>Enter your employee ID and password to login.</p>
+            </div>
+
+            <form class="auth-form" action="employee-home.html" method="get">
+                <label for="employee-id">Employee ID</label>
+                <input id="employee-id" name="employee_id" type="text" maxlength="50"
+                       autocomplete="username" required autofocus>
+
+                <label for="employee-password">Employee password</label>
+                <input id="employee-password" name="password" type="password"
+                       autocomplete="current-password" required>
+
+                <button class="primary-button" type="submit">Log in</button>
+            </form>
+            <p class="static-note">Administrator? <a href="admin-login.html">Go to admin login</a></p>
+        </section>
+    </main>
+</body>
+</html>

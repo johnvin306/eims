@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | EIMS</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="admin-login-page">
+    <main class="auth-shell admin-auth-shell">
+        <section class="auth-brand-panel">
+            <div class="auth-logo" aria-label="Employee information management system">EIMS</div>
+            <p class="eyebrow">EIMS • ADMINISTRATION</p>
+            <h1>Admin<br>Portal</h1>
+            <p class="brand-copy">Securely access employee records and management tools.</p>
+        </section>
+
+        <section class="auth-card">
+            <div class="auth-card-heading">
+                <span class="section-kicker">Administrator access</span>
+                <h2>Welcome</h2>
+                <p>Sign in as an administrator to access the management dashboard.</p>
+            </div>
+            <form class="auth-form" action="dashboard.html" method="get">
+                <label for="admin-username">Username</label>
+                <input id="admin-username" name="username" autocomplete="username" required>
+
+                <label for="admin-password">Password</label>
+                <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+
+                <button class="primary-button" type="submit">Log in</button>
+            </form>
+            <p class="static-note"><a href="index.html">Back to employee login</a></p>
+        </section>
+    </main>
+</body>
+</html>

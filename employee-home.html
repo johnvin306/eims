@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Home | EIMS</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body class="ems-home">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <p class="brand">EIMS <small>EMPLOYEE PORTAL</small></p>
+            <p class="nav-label">Workspace</p>
+            <nav class="nav-links" aria-label="Employee navigation">
+                <a class="active" href="employee-home.html">Home</a>
+                <a href="employee-profile.html">View Profile</a>
+                <a href="employee-updates.html">Tasks &amp; Announcements</a>
+                <a href="employee-information.html">Update Information</a>
+            </nav>
+            <div class="sidebar-account">
+                <p class="nav-label">Account</p>
+                <nav class="nav-links" aria-label="Account navigation">
+                    <a href="index.html">Log out</a>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="workspace" id="home">
+            <header class="topbar">
+                <strong>Home</strong>
+                <span class="user-chip">Welcome, EMP001</span>
+            </header>
+            <div class="content">
+                <section class="ems-features" aria-labelledby="home-heading">
+                    <div class="ems-section-intro">
+                        <p class="ems-eyebrow">EMPLOYEE PORTAL</p>
+                        <h1 id="home-heading">Home</h1>
+                        <p>Mga pangunahing impormasyon at update para sa iyo bilang empleyado.</p>
+                    </div>
+                    <div class="ems-feature-grid">
+                        <a class="ems-feature-card employee-home-link" href="employee-profile.html">
+                            <span class="ems-feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"></rect><circle cx="12" cy="9" r="2"></circle><path d="M8.5 16c.6-2 6.4-2 7 0M8 5h2M14 5h2"></path></svg>
+                            </span>
+                            <h2>View Profile</h2>
+                            <p>Makikita ng employee ang kanyang personal information, employee ID, position, department, at contact details.</p>
+                        </a>
+                        <a class="ems-feature-card employee-home-link" href="employee-updates.html">
+                            <span class="ems-feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 3v4M16 3v4M4 9h16M8 13h3M8 16h6"></path></svg>
+                            </span>
+                            <h2>View Tasks or Announcements</h2>
+                            <p>Makikita ang mga task, schedule, company announcements, at iba pang updates na inilalagay ng admin o HR.</p>
+                        </a>
+                        <a class="ems-feature-card employee-home-link" href="employee-information.html">
+                            <span class="ems-feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 17.5V20h2.5L18 8.5 15.5 6 4 17.5zM14.5 7l2.5 2.5M12 20h8"></path></svg>
+                            </span>
+                            <h2>Update Personal Information</h2>
+                            <p>Maaaring mag-update ng ilang personal details, kung pinapayagan, o mag-request sa HR na itama ang impormasyon.</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="mobile-nav.js"></script>
+</body>
+</html>
